@@ -7,7 +7,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import StratifiedShuffleSplit
 import pickle as p
 import logging
-data_path = "./data/"
+data_path = "../data/"
 train = pd.read_csv(data_path+'train_set.csv') 
 logging.basicConfig(filename='grid_search.log', filemode='w',level=logging.INFO)
 vect = TfidfVectorizer(ngram_range=(1,2), max_df=0.9, min_df= 3, smooth_idf=1, sublinear_tf=1)
